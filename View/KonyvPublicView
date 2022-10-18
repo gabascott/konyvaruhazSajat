@@ -1,0 +1,18 @@
+class KonyvPublicView{
+    #elem;
+    constructor(elem, szuloElem){
+        this.#elem = elem;
+        szuloElem.append(`
+            <div>
+                <h2>${elem.cim}</h2>
+                <p>${elem.szerzo}</p>
+                <span>${elem.ar}</span>
+                <button>Kosárba</button>
+            </div>
+        `);
+        this.konyvPublicElem = szuloElem.children("div:last-child");
+
+    }
+}
+
+export default KonyvPublicView;
